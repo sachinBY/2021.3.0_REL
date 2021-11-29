@@ -1,0 +1,7 @@
+%dw 2.0
+output application/java
+---
+if(vars.filterCondition != null)
+	"select ORDERSKU.*,ITEM.UOM from ORDERSKU,ORDERHEADER,ITEM where ORDERSKU.ITEM = ITEM.ITEM AND ORDERSKU.ORDERID = ORDERHEADER.ORDERID" ++ " AND " ++ vars.filterCondition
+else	
+	"select ORDERSKU.*,ITEM.UOM from ORDERSKU,ORDERHEADER,ITEM where ORDERSKU.ITEM = ITEM.ITEM AND ORDERSKU.ORDERID = ORDERHEADER.ORDERID"

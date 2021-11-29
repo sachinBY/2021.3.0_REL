@@ -1,0 +1,1 @@
+EXECUTE CONNECT_MS.purgeMessages @p_retentionDays = 5, @p_batchSize = 5000 
