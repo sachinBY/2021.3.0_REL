@@ -1,0 +1,33 @@
+bydm:
+  enable:
+    validation: "true"
+  inbound:
+    #possible values are seconds,minutes,hours,days,weeks,months,year..default will be minutes if configured as ""
+    default:
+      timemeasurementunitcode: "sec"         
+  message:
+    size: "100"     
+  network:
+    default:
+      transmode: " "
+      uom: "EA"
+      sourceuom: "EA"
+      targetuom: "EA"
+  automatic:
+    uomconversion: "false"
+  dmdunit:
+    ancestry:
+      hierarchies: "CAT,SUBCAT"
+    process:
+      ancestry: "false"    
+  fcst:
+    in:
+      table: "skuexternalfcst"    
+    
+  inventory:
+    aggregation:
+      enabled: false
+      categories: "AVAILABLE_FOR_SALE"
+  hist:
+    aggregation:
+      enabled: false

@@ -18,6 +18,8 @@ fun getUomCategory(inputPayload, index) =  if (scpoTypeUomCategory[inputPayload]
 ---
 (payload.measurement  map (measurementUnitCode, measurementUnitCodeIndex) -> {
 	measurementUnitCode: (measurementUnitCode.measurementUnitCodeInformation map (measurementUnitCodeInf, measurementUnitCodeInfIndex) -> {
+		MS_BULK_REF: vars.storeHeaderReference.bulkReference,
+		MS_REF: vars.storeMsgReference.messageReference,
 	    (INTEGRATION_STAMP:((vars.creationDateAndTime as DateTime) + ("PT$((measurementUnitCodeIndex))S" as Period)) as String{format:"yyyy-MM-dd HH:mm:ss"}),
 		UOM : if(measurementUnitCode.measurementTypeCategory == "TIME") 
 					getUom(measurementUnitCodeInf.measurementUnitCode.timeMeasurementUnitCode, measurementUnitCodeInfIndex)

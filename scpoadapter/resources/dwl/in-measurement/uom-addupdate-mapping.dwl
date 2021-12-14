@@ -3,6 +3,8 @@ output application/java
 var default_value = "###JDA_DEFAULT_VALUE###"
 ---
 (payload map (measurement, indexOfmeasurement) -> {
+		MS_BULK_REF: measurement.MS_BULK_REF,
+		MS_REF: measurement.MS_REF,
 	    INTEGRATION_STAMP: measurement.INTEGRATION_STAMP,
 		UOM: if (measurement.UOM != null) measurement.UOM else default_value,    
 	    SINGULARLABEL:	if(measurement.SINGULARLABEL != null) measurement.SINGULARLABEL else default_value,

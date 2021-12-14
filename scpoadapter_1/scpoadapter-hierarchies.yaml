@@ -1,0 +1,7 @@
+scpo:
+  tables:
+    hierarchies:
+      total: 3
+      '0': 'uom'
+      '1': 'uomcategory'
+      '2': 'ddeprofile'
