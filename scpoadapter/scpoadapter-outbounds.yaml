@@ -43,7 +43,7 @@ scpo:
       receivers: 'HOST.GLOBAL'
       preprocessing: true
       messagetype: 'item'
-      identifier: 'BYDM 2021.5.0'
+      identifier: 'BYDM 2021.10.0'
     orderlink:
       receivers: 'HOST.GLOBAL'
       messagetype: 'supplyDemandLink'
