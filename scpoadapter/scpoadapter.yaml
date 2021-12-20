@@ -30,4 +30,4 @@ bydm:
       categories: "AVAILABLE_FOR_SALE"
   hist:
     aggregation:
-      enabled: true
+      enabled: false
