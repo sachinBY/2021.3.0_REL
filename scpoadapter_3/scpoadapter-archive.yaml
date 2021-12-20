@@ -1,0 +1,9 @@
+file:
+  archive:
+    enabled: "true"
+inbound:
+  archive:
+    path: C:/scpo-2019.1.1/messageArchive/inbound
+outbound:
+  archive:
+    path: C:/scpo-2019.1.1/messageArchive/outbound

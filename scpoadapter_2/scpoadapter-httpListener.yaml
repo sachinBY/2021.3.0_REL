@@ -1,0 +1,15 @@
+api:
+  base: connect-scpo-adapter-api/v1
+  name: connect-scpo-adapter-api
+  version: 1.0.0
+  #config: "connect-scpo-adapter-http-shared-listener-internal"
+  config: "connect-scpo-adapter-https-shared-listener-internal"
+  http:
+    port: "9091"
+    host: "0.0.0.0"
+  https:
+    port: "9092"
+    host: "0.0.0.0"
+    timeout: "30000"
+  autodiscovery:
+    id: "xxxx"

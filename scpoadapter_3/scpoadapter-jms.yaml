@@ -1,0 +1,23 @@
+mbJmsComponent:
+  queue:
+    brokerURL: tcp://localhost:61616
+    user: admin
+    maxConnections: "5"
+    concurrentConsumers: "3"
+    initialRedeliveryDelay: "20000"
+    redeliveryDelay: "20000"
+    sessionCacheSize: "100"
+    maxRedelivery: "0"
+
+jms:
+  queue:
+    mb:
+      out: MB-SCPO
+      in: SCPO-MB
+      error: SCPO-DLQMB
+    scpo:
+      ack: ACK-SCPO  
+  outbound:
+    endpoint:
+      type: queue
+      

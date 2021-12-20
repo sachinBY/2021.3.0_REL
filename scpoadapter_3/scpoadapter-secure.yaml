@@ -1,0 +1,80 @@
+mbJmsComponent:
+  queue:
+    password-secure: admin
+      
+scpo:
+  intermediateQueue:
+    password-secure: admin
+  db:
+    oracle:
+      password-secure: TST_SCPOMGR
+      staging-password-secure: TST_IGPMGR
+      
+##########################################################
+#
+#         messagestore configuration   
+#
+##########################################################      
+  ms:
+    server:
+      requester:
+        https:
+          key:
+            password-secure: "changeme"
+          tls:
+            keyStore:
+              password-secure: "changeme"
+            trustStore:
+              password-secure: "changeme"
+    
+##########################################################
+#
+#         bulk notification configuration   
+#
+##########################################################      
+bulk:
+  azure:
+    container:
+      name: 
+    connection:
+      string-secure: 
+  callback:
+    password-secure:
+    azure:
+      container:
+        name:
+      connection:
+        string-secure:
+    ingestion:
+      truststore:
+        password-secure: "changeme"
+      key:
+        password-secure: "changeme"
+      keystore:
+        password-secure: "changeme"    
+        
+##########################################################
+#
+#         canmodel service configuration   
+#
+##########################################################
+canmodel:
+  service:
+    https:
+      tls:
+        keystore:
+          password-secure: "changeme"
+          key:
+            password-secure: "changeme"
+        truststore:
+          password-secure: "changeme"       
+      
+##########################################################
+#
+#         sqlloader configuration   
+#
+##########################################################      
+sqlldr:
+  path-secure: "C:\\workspace\\installations\\oracle\\12201\\product\\12.2.0\\dbhome_1\\bin\\sqlldr.exe"
+  connection:
+    string-secure: "TST_IGPMGR/TST_IGPMGR@MD1NPDVCID02:1521/O19C01"

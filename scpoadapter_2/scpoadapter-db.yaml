@@ -1,0 +1,65 @@
+scpo:
+  cds:
+    enabled: false
+  db:
+    type: ""
+    blockSize: "100"
+    fetchSize: "1000"
+    batchCommitSize: "1000"
+    batchExecuteMaxRetrial: "3"
+    maxAllowedErrorsInBatch: "10"
+    error:
+      tables:
+        enable: "false"
+    continuous:
+      errors:
+        msg: "Continuous Errors in the batch"
+    oracle:
+      host: md1npdvjce01
+      port: "1521"
+      instance: o19c01
+      user: SCPOMGR
+      staging-user: IGPMGR
+      max:
+        idle:
+          time:
+            secs: "600"
+      pooling:
+        checkoutTimeout: "60000"
+        maxIdleTime: "60000"
+        idleConnectionTestPeriod: "60000"
+        maxPoolSize: "50"
+        minPoolSize: "20"
+        incBy: "10"
+        stmtCacheSize: "10"
+    truncateTable:
+      inventory: "false"
+      planpurch: "false"
+      bom: "false"
+      altbom: "false"
+      vehicleload: "false"
+      vehcileloadline: "false"
+      purchmethod: "false"
+      relation: "false"
+      custorder: "false"
+      custorderheader: "false"
+      res: "false"
+    soft-delete:
+      flag: "false"
+      udc:
+        name: "IS_DELETE"                    
+  automatic-feed:
+    enable:  "false"
+  aggregate:
+    period:  "weekly"
+  
+  #properties to enable igp for a table. just change table name to enable igp for a particular table
+  #item:
+    #igp:
+      #enabled: true
+################################################################################
+################## SQL Loader configuration#####################################
+################################################################################      
+sqlldr:
+  bindsize: "1818000000" 
+  readsize: "1818000000"      
