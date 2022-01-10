@@ -20,7 +20,7 @@ scpo:
     vehicleloadline:
       receivers: 'HOST.GLOBAL'
       messagetype: 'plannedSupply'
-      identifier: 'BYDM 2021.5.0'
+      identifier: 'BYDM 2021.8.0'
       format: 'bydm'
     planarriv:
       receivers: 'HOST.GLOBAL'

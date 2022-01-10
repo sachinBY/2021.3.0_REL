@@ -1,0 +1,47 @@
+bulk:
+  content:
+    type: "BYDM"
+  notification:
+    enabled: "false"
+    identifier: "BYDM 2021.2.0"
+  serviceName: "SCPO-GLOBAL"
+  serviceType: "SCPO"
+  serviceInstance: "SCPO-DALLAS"
+  serviceNamedVersion: "SCPO-2020.1.0"
+  csv:
+    batch:
+      size: 100000
+    schema:
+      location:
+  read:
+    batch:
+      size: "100"    
+  persistent:
+    store:
+      host:
+      #supported possible values are Azure Blob Store, Local File Store  
+      type: "Local File Store"
+      path: "//MD1NPDVJCE01.dev.corp.local/Tools/u/SCPO" 
+  callback:
+    # supported possible values are AzureBlob, FILE
+    protocol: "FILE"
+    ingestion:
+      config: "HTTPS_Ingestion_Service_Request_configuration"
+      #config: "HTTP_Ingestion_Service_Request_configuration"
+      host: "localhost"
+      port: "9870"
+      maxconnections: "-1"
+      response:
+        buffer:
+          size: "1024"
+      connection:
+        idle:
+          timeout: "30000"
+      resource:
+        path: "/ing/api/v1/callback"
+      truststore:
+        path: "truststore.jks"
+      keystore:
+        path: "keystore.jks"   
+    username:
+    path:
